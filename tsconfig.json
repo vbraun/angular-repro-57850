@@ -1,0 +1,56 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "paths": {
+      "a-lib": [
+        "./dist/a-lib"
+      ],
+      "b-lib": [
+        "./dist/b-lib"
+      ]
+    },
+    // this baseUrl allows the invalid import from 'projects/a-lib/src/lib/a-lib';
+    "baseUrl": "./",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "typeCheckHostBindings": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/a-lib/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/a-lib/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/b-lib/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/b-lib/tsconfig.spec.json"
+    }
+  ]
+}
